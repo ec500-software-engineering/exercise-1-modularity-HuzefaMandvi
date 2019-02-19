@@ -1,6 +1,4 @@
 from cryptography.fernet import Fernet
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-import data as Data_Module
 
 def generate_key(p_id):
     filename = str(p_id) + ".key"
