@@ -1,6 +1,5 @@
-from tkinter import *
+from tkinter import Label, IntVar
 from data import data_pull, cleanup
-import time
 from error_handler import Error_Handler
 from error_handler import check_hr, check_bo, check_bp
 from datastore import insertData, getData
@@ -9,13 +8,6 @@ from alert_system import page_doctor
 from pathlib import Path
 import os
 import random
-
-# Time intervals for retrieving data
-hr_interval = 5
-bp_interval = 5
-bo_interval = 5
-
-min_int = 5
 
 # current p_id
 p_id = random.randint(0,10000)
@@ -80,7 +72,6 @@ def runUI():
 # Store (theoretically encrypted) data
 # Handle errors
 def mainLoop(hr, bp, bp2, bo):
-    min_int = min(hr_interval, bp_interval, bo_interval)
     data_obj = data_pull()
     insertData(p_id,data_obj)
 
