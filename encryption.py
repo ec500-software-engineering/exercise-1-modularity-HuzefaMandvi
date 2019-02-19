@@ -1,11 +1,6 @@
-import cryptography
-from cryptography.hazmat.backends import default_backend
 from cryptography.fernet import Fernet
-from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-import base64
 import data as Data_Module
-import ast
 
 def generate_key(p_id):
     filename = str(p_id) + ".key"
