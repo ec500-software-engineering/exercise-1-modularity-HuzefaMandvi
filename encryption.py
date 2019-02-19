@@ -19,7 +19,6 @@ def generate_key(p_id):
 
 def encrypt(data, key):
     # Encrypt anything
-    print(data)
     message = str(data).encode()
     f = Fernet(key)
     encrypted = f.encrypt(message)
